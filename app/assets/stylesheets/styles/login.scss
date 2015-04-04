@@ -1,0 +1,29 @@
+.login-signup-header {
+	min-width: 250px;
+	width: 100%;
+	text-align: center;
+}
+
+.login-signup-form {
+	min-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+
+	.field {
+		input {
+			width: 100%;
+		}
+	}
+
+	#login-signup-interchange {
+		margin-top: 10px;
+
+		p {
+			margin: 0;
+			text-align: center;
+			color: grey;
+			font-size: 0.75em;
+		}
+	}
+}
