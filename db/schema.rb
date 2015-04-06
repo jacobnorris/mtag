@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150319053050) do
+ActiveRecord::Schema.define(version: 20150405234857) do
 
   create_table "cards", force: true do |t|
     t.string   "name"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20150319053050) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "libraries", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "card_id"
+    t.integer  "card_count", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "libraries", ["card_id"], name: "index_libraries_on_card_id"
+  add_index "libraries", ["user_id"], name: "index_libraries_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email"
